@@ -1,0 +1,260 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Main {
+  background-color: #fafafa;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  &__image {
+    width: 50vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__heading {
+      font-family: "Roboto";
+      font-size: 33px;
+    }
+    &__para {
+      font-family: "Roboto";
+      font-size: 23px;
+    }
+
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100%;
+    background-color: #ffffff;
+    padding-left: 25px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  
+    &__button {
+      height: 50px;
+      width: 150px;
+      background: #2f8bf5;
+      color: #ffffff;
+      border-radius: 8px;
+      border: transparent;
+      outline: none;
+      cursor: pointer;
+      font-family: "Roboto";
+      font-size: 16px;
+      margin-top: 10px;
+
+    } 
+
+    &__label {
+      color: #a3adb8;
+      font-family: "Roboto";
+      font-size: 17px;
+      margin: 5px;
+      margin-top: 6px;
+
+    }
+
+    &__input {
+      border: 1px solid #9ba1a8;
+      outline: none;
+      height: 40px;
+      width: 60%;
+     border-radius: 5px;
+     padding: 6px;
+     font-size: 20px;
+
+    }
+
+    &__input--number {
+      border: 1px solid #9ba1a8;
+      outline: none;
+      height: 40px;
+      width: 40%;
+      border-radius: 5px;
+      padding: 6px;
+      font-size: 20px;
+
+    }
+
+    &__checkbox {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 17px;
+      width: 17px;
+      border: 1px solid rgb(63, 165, 199);
+      color: rgb(63, 165, 199)
+    }
+
+    &__checkboxLabel {
+       font-size: 17px;
+       font-family: "Roboto";
+       margin: 5px;
+       margin-top: -40px;
+
+    }
+
+    &__showError {
+      color: red;
+      font-size: 14px;
+
+    }
+  
+
+ }
+ 
+}
+
+
+
+
+
+.Graph {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-image: url("https://www.linkpicture.com/q/Screenshot-2022-05-15-112929_2.png");
+  background-size: cover;
+  
+}
+.terms {
+  font-size: 17px;
+}
+
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+  transform: rotate(270deg);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#layout {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+div#container {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  background-color: transparent;
+  
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  fill: #80cbc4;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: gray;
+}
+
+line#limit {
+  stroke: #FED966;
+  stroke-width: 3;
+  stroke-dasharray: 3 6;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
+
+text.divergence {
+  font-size: 14px;
+  fill: #2F4A6D;
+}
+
+text.value {
+  font-size: 14px;
+}
+
+text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+text.label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+text.source {
+  font-size: 10px;
+}
+
+
+

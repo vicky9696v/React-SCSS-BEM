@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {Component} from "react"
+import './App.scss';
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import Register from './components/registerPage.js'
+import Graph from './components/graph.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state = {
+    RenderComponentGraph:false
 }
 
+  onFormSubmit = () =>{
+    this.setState({RenderComponentGraph:!this.state.RenderComponentGraph})
+  }
+
+  render() {
+     return (
+       <BrowserRouter>
+        <Routes>
+        <Route exact path="/" element={<Register  onFormSubmit={this.onFormSubmit} state={this.state} />} />
+         <Route exact path="/graph" element={<Graph  RenderComponentGraph={this.state.RenderComponentGraph}/>} />
+        </Routes>
+       </BrowserRouter>
+     )
+}}
 export default App;
